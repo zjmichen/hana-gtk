@@ -1,7 +1,7 @@
 public class MyApp : Gtk.Application {
 
     public MyApp () {
-        Object (application_id: "notify.app",
+        Object (application_id: "com.amedesu.hana",
         flags: ApplicationFlags.FLAGS_NONE);
     }
 
@@ -17,7 +17,7 @@ public class MyApp : Gtk.Application {
             notification.set_body (_("Example notification"));
             var icon = new Gtk.Image.from_icon_name ("dialog-warning", Gtk.IconSize.DIALOG);
             notification.set_icon (icon.gicon);
-            this.send_notification ("notify.app", notification);
+            this.send_notification ("com.amedesu.hana", notification);
         });
 
 
